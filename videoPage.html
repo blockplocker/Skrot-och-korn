@@ -5,16 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skrot och Korn AB</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="/Images/logo.png" alt="logo" width="100" height="100">
+        </a>
+        <img class="header__banner" src="/Images/Banner-nobg.png" alt="banner" width="600" height="200">
+
+        <div class="header__search-bar">
+            <input class="header__search-input" type="text" placeholder="Search..." >
+            <button class="header__search__button">Search</button>
+        </div>
+        
+    </header>
     <nav>
-        <a href="index.html">Startsida</a>
-        <a href="productPage.html">Product sida</a>
-        <a href="videoPage.html">Media sida</a>
-        <a href="ContactPage.html">kontakta oss</a>
+        <a class="nav__link " href="index.html">Startsida</a>
+        <a class="nav__link" href="productPage.html">Product sida</a>
+        <a class="nav__link nav__active" href="videoPage.html">Media sida</a>
+        <a class="nav__link" href="ContactPage.html">kontakta oss</a>
     </nav>
-    <main>
+    <main class="main__videopage">
         <div>
             <h1>Lyftkran</h1>
             <video width="560" height="315" controls>
@@ -30,8 +43,29 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </main>
-    <footer style="position: fixed; bottom: 10px; right: 10px;">
-        <iframe src="/contactDetails.html" width="300" height="200" frameborder="0"></iframe>
+    <aside>
+        <h3>Våra tjänster</h3>
+        <p>Vi erbjuder ett brett utbud av tjänster för att möta dina behov inom maskin och fordon.</p>
+        <ul>
+            <li>Uthyrning av entreprenadmaskiner</li>
+            <li>Försäljning av begagnade fordon</li>
+            <li>Service och reparation</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p class="footer__copyright">&copy; 2023 Skrot och Korn AB. All rights reserved.</p>
+        <div class="footer__Main">
+            <div>
+                <p>Adress: Maskinvägen 1, 123 45 Maskinstaden</p>
+                <p>Öppettider: Måndag - Fredag 08:00 - 17:00</p>
+            </div>
+            <ul>
+                <li>Kontakta oss:</li>
+                <li>Email: <a href="mailto:support@skrotkorn.se">support@skrotkorn.se</a></li>
+                <li>Telefon: 0123-456789</li>
+            </ul>
+        </div>
     </footer>
 </body>
 
