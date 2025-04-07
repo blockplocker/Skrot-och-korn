@@ -1,53 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skrot och Korn AB</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <a href="index.html">Startsida</a>
-    <a href="productPage.html">Product sida</a>
-    <a href="videoPage.html">Media sida</a>
-    <a href="ContactPage.html">kontakta oss</a>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="/Images/logo.png" alt="logo" width="100" height="100">
+        </a>
+        <img class="header__banner" src="/Images/Banner-nobg.png" alt="banner" width="600" height="200">
+        <div class="header__search-bar">
+            <input class="header__search-input" type="text" placeholder="Search...">
+            <button class="header__search__button">Search</button>
+        </div>
+    </header>
 
-    <br>
-    <h1>Producter</h1>
-    <table class="product_table">
-        <tr>   
-            <th>Bild</th>
-            <th>Namn</th>
-            <th>Pris</th>
-            <th>Pris utan moms</th>
-            <th>Hästkrafter</th>
-            <th>Lastvikt</th>
-        </tr>
-        <tr>
-            <td><img src="/Images/Grävskopa.jpg" alt="Grävskopa" width="200"></td>
-            <td>Grävskopa</td>
-            <td>200 000 kr</td>
-            <td>175 000 kr</td>
-            <td>100</td>
-            <td>3 ton</td>
-        </tr>
-        <tr>
-            <td><img src="/Images/Lyftkran.jpg" alt="Lyftkran" width="200"></td>
-            <td>Lyftkran</td>
-            <td>500 000 kr</td>
-            <td>460 000 kr</td>
-            <td>300</td>
-            <td>50 ton</td>
-        </tr>
-        <tr>
-            <td><img src="/Images/Lastbil.jpg" alt="Lastbil" width="200"></td>
-            <td>Lastbil</td>
-            <td>700 000 kr</td>
-            <td>650 000 kr</td>
-            <td>400</td>
-            <td>15 ton</td>
-        </tr>
+    <nav>
+        <a class="nav__link " href="index.html">Startsida</a>
+        <a class="nav__link nav__active" href="productPage.html">Product sida</a>
+        <a class="nav__link " href="videoPage.html">Media sida</a>
+        <a class="nav__link " href="ContactPage.html">kontakta oss</a>
+    </nav>
 
-    </table>
+    <main class="main__productpage">
+
+        <h1>Producter</h1>
+
+
+        <div class="main__productpage__container">
+
+            <img src="/Images/Grävskopa.jpg" alt="Grävskopa" width="200">
+            <img src="/Images/Lyftkran.jpg" alt="Lyftkran" width="200">
+            <img src="/Images/Lastbil.jpg" alt="Lastbil" width="200">
+
+            <p>Grävskopa</p>
+            <p>Lyftkran</p>
+            <p>Lastbil</p>
+
+            <p>200 000 kr</p>
+            <p>500 000 kr</p>
+            <p>700 000 kr</p>
+
+            <p>utan moms</p>
+            <p>utan moms</p>
+            <p>utan moms</p>
+
+            <p>175 000 kr</p>
+            <p>460 000 kr</p>
+            <p>650 000 kr</p>
+
+            <h3>Hästkrafter</h3>
+            <h3>Hästkrafter</h3>
+            <h3>Hästkrafter</h3>
+
+            <p>100</p>
+            <p>300</p>
+            <p>400</p>
+
+            <h3>Lastvikt</h3>
+            <h3>Lastvikt</h3>
+            <h3>Lastvikt</h3>
+
+            <p>3 ton</p>
+            <p>50 ton</p>
+            <p>15 ton</p>
+
+            <h3>köp . <input class="main__productpage__container__checkbox" type="checkbox" name="Grävskopa" value="200000" id="checkbox1"></h3>
+            <h3>köp . <input class="main__productpage__container__checkbox" type="checkbox" name="Lyftkran" value="500000" id="checkbox2"></h3>
+            <h3>köp . <input class="main__productpage__container__checkbox" type="checkbox" name="Lastbil" value="700000" id="checkbox3"></h3>
+
+            <h2 class="price" id="price">Priset av valda fordon 0kr</h2>
+
+        </div>
+
+    </main>
+
+    <aside>
+        <div class="ad ad-1">
+            <h3>Hyr din maskin nu!</h3>
+            <p>Vi har de bästa priserna på entreprenadmaskiner.</p>
+            <button class="ad-button">Läs mer</button>
+        </div>
+        <div class="ad ad-2">
+            <h3>Sälj ditt fordon!</h3>
+            <p>Behöver du en snabb och säker försäljning? Vi hjälper dig.</p>
+            <button class="ad-button">Kontakta oss</button>
+        </div>
+    </aside>
+    
+
+    <footer>
+        <p class="footer__copyright">&copy; 2023 Skrot och Korn AB. All rights reserved.</p>
+        <div class="footer__Main">
+            <div>
+                <p>Adress: Maskinvägen 1, 123 45 Maskinstaden</p>
+                <p>Öppettider: Måndag - Fredag 08:00 - 17:00</p>
+            </div>
+            <ul>
+                <li>Kontakta oss:</li>
+                <li>Email: <a href="mailto:support@skrotkorn.se">support@skrotkorn.se</a></li>
+                <li>Telefon: 0123-456789</li>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>

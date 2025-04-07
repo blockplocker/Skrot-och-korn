@@ -79,12 +79,12 @@ header {
     cursor: pointer;
     box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
 }
-.header__search__button:hover{
+.header__search__button:hover {
     background-color: var(--color-3);
     color: var(--color-4);
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.header__search__button:active{
+.header__search__button:active {
     background-color: var(--color-5);
     color: var(--color-4);
 }
@@ -98,7 +98,7 @@ nav {
     flex-direction: column;
     gap: 20px;
 }
-.nav__link{
+.nav__link {
     border-bottom: #0d1b2a solid 2px;
     border-left: #0d1b2a solid 2px;
     text-decoration: none;
@@ -108,39 +108,118 @@ nav {
     transition: background-color 0.3s ease;
 }
 .nav__active,
-.nav__link:hover{
+.nav__link:hover {
     background-color: var(--color-3);
     color: var(--color-4);
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.nav__link:active{
+.nav__link:active {
     background-color: var(--color-5);
     color: var(--color-4);
 }
 /* ----------------------------------------- MAIN ------------------------------------ */
 main {
-    grid-row: 2;
     padding: 20px;
     background-color: var(--color-2);
+    display: flex;
+    flex-direction: column;
 }
 main img {
     border-radius: 10px;
-    /* float: left; */
+    float: left;
     padding: 10px;
+}
+main article {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--color-5);
+    color: var(--color-5);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+main article div {
+    padding: 10px;
+}
+.main__productpage__container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto repeat(9, 1fr) min-content auto;
+    justify-content: center;
+    align-items: center;
+}
+.main__productpage__container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-4);
+}
+.main__productpage__container__checkbox {
+    transform: scale(2);
+    /* width: 5%;  */
+}
+.main__productpage__container .price {
+    grid-column: 1 / 4;
+    padding: 10px;
+}
+.main__videopage__container {
+    width: min-content;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--color-5);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .main__videopage {
     background-image: url(/Images/filmrulle.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 /* ----------------------------------------- ASIDE ------------------------------------ */
 aside {
-    grid-row: 2;
     padding: 20px;
     background-color: var(--color-2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ad {
+    padding: 15px;
+    background-color: var(--color-4);
+    border-radius: 5px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.ad:hover {
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+}
+.ad h3 {
+    color: var(--color-5);
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+.ad p {
+    color: var(--color-5);
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+.ad-button {
+    padding: 10px 15px;
+    background-color: var(--color-2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.ad-button:hover {
+    background-color: var(--color-3);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* ----------------------------------------- FOOTER ------------------------------------ */
@@ -170,4 +249,35 @@ h5,
 h6 {
     margin: 0;
     font-weight: normal;
+}
+
+/* ----------------------------------------- Media ------------------------------------ */
+@media (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__search-input {
+        width: 100%;
+    }
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
