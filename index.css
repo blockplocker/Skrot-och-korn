@@ -175,7 +175,7 @@ main article div {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .main__videopage {
-    background-image: url(/Images/filmrulle.png);
+    background-image: url(Images/filmrulle.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
